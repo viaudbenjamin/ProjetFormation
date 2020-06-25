@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+
+
+    <!-- HEADER -->
+    <nav class=" header navbar navbar-light bg-dark">
+        Weather App
+    <a class="logout" href="./login.html">Deconnexion</a>
+</nav>
+<div class="home">
+    <div class="container">
+    <div id="error" class="col-12 text-center">
+        <h1>Get started whith WeatherApp !</h1>
+    </div>
+
+    <div class="row " id="formulaire">
+        <div class="col-12 col-md-6 text-center">
+            <form action="/sign-up" method="POST">
+                <div class="form-group">
+                    <h2 >Sign Up</h2>
+                <label for="exampleInputEmail1">name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label >firstname</label>
+                    <input type="text" class="form-control"  name="firstname" placeholder="Enter email">
+                </div>
+                <div class="form-group"> 
+                    <label >Email address</label>
+                    <input type="email" class="form-control"  name="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label >Password</label>
+                    <input type="password" class="form-control"  name="password" placeholder="Enter password"> 
+                </div>
+                <button type="submit" class="btn btn-info ">Submit</button>
+            </form>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+            <form action="/sign-in" method="POST">
+                <div class="form-group">
+                    <h2 >Sign In</h2>
+                    <label >Email address</label>
+                    <input type="email" class="form-control" name="email"  placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label >Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<!-- GRID -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../javascripts/scriptLogin.js"></script>
+</body>
+</html>

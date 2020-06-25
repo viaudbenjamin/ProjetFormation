@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <%for(var i=0;i<commandeList.length;i++){%>
+    <%for(var t=0;t<commandeList[i].train.length;t++){%>
+    
+    <p><%=commandeList[i].train[t].departure%>/<%=commandeList[i].train[t].arrival%></p>
+    <p><%=commandeList[i].train[t].departureTime%></p>
+    <%}%>
+    <p><%=commandeList[i].total%></p>
+    <%}%>
+</body>
+</html>

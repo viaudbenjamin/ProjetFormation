@@ -1,0 +1,26 @@
+<%-include('header')%>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 col-lg-9 col-xl-5 central_available">
+                <h2 id="h2" class="text-white font-weight-normal text-left ml-5">Tickets available on <%=dateaffichage(voyageList[0].date)%></h1>
+                  <%for(var i=0;i<voyageList.length;i++){%>
+
+              <div class="card mt-4">
+                <div class="card-body d-flex align-items-center mt-3">
+                  <h4 class="card-title"><%=voyageList[i].departure%>/<%=voyageList[i].arrival%></h4>
+                  <p class="card-text mx-auto mr-auto text-muted"><%=voyageList[i].departureTime%></p>
+                  <h4 class="card-text mr-2 align-middle"><%=voyageList[i].price%>€</h4>
+                  <a href="/commande?id=<%=voyageList[i]._id%>" class="btn btn-primary btn-available">OK</a>
+                </div>
+                <%}%>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+    <footer>&#169; 2019 La Capsule</footer>
+</body>
+
+</html>

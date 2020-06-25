@@ -1,0 +1,169 @@
+html{
+    height:100%;
+}
+
+body{
+    background: linear-gradient(to top, #457faf 0%, #c8dbe6 100%);
+    height:100%;
+    margin:0;
+    padding:0;
+    background-attachment: fixed;
+}
+
+.navBar{
+    display:flex;
+    justify-content: space-between;
+}
+
+ul{
+    display:flex;
+    list-style-type: none;
+}
+
+a{
+    text-decoration:none;
+}
+.mtl{
+    margin-top:10px;
+    font-size:16px;
+}
+
+.mtl img{
+    height:50px;
+    width:50px;
+}
+
+.top{
+    margin:15px 0 0 15px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.mtr{
+    font-weight:bold;
+    font-size:18px;
+    margin-top:25px;
+}
+
+.red{
+    margin-right:40px;
+}
+
+.licolor{
+    color:#ca464d;
+}
+
+.basic{
+    color:#000000;
+}
+
+.basic:hover{
+    color:#000000;
+}
+
+.licolor:hover{
+    color:#ca464d;
+}
+
+/* Corps de la page login */
+
+.central{
+
+    margin: 10em auto;
+    display:flex;
+    justify-content: center;
+    margin-bottom:7.8em;
+    margin-top:5em;
+}
+
+.btn{
+    margin:0 auto;
+    background-color:#ca464d;
+    color:#ffffff;
+}
+
+/* Corps de la page homepage */
+
+.home_input{
+    width:200px;
+    margin-left:20px;
+}
+
+.btn_homepage{
+    margin-left:20px;
+}
+
+.landmark{
+    width:50%;
+    margin-top:75px;
+}
+
+.center_homepage {
+    text-align:center;
+}
+
+/* Corps de la page error */
+
+.btn_error{
+    margin:0 auto;
+}
+
+/* Corps de la page tickets available */
+
+.central_available{
+margin: 5em auto;
+ 
+}
+
+.pleft{
+    margin-left:80px;
+}
+
+.btn-available{
+    margin-right:0;
+    margin-left:0;
+margin-top:-10px;
+border:0;
+}
+
+/* Corps de la page last trips */
+
+.table td, .table th {
+    border-top: 0;
+}
+
+.table thead th{
+    border-bottom:0;
+}
+
+tbody th{
+    font-weight:normal;
+}
+
+table{
+    font-size:18px;
+}
+
+.ml-5{
+    margin-right:100px;
+}
+
+/* Corps de la page my tickets */
+
+
+/* Footer */
+
+footer{
+    text-align: center;
+    font-style:italic;
+    color:#85aecc;
+    margin-bottom:20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+#h2{
+    width: 100%;
+}

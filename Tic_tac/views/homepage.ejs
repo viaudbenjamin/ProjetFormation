@@ -1,0 +1,23 @@
+<%-include('header')%>
+
+    <div class="container-fluid">
+        <div class="central">
+        <div class="center_homepage">
+            <h2 class=" text-white font-weight-normal text-left">One-way ticket:</h1>
+            <form action="/result" method="POST">
+                <div class="d-flex">
+                
+                    <input type="text" class="form-control home_input" placeholder="From: Paris, Marseille ..."  aria-describedby="basic-addon1" name="villeDepart">
+                    <input type="text" class="form-control home_input" placeholder="To: Lille, Nantes ..." aria-label="Name" aria-describedby="basic-addon1" name="villeArriver">
+                    <input type="date" class="form-control home_input"id="start" value="01-05-2020" min="2018-01-01" max="2075-12-31" name="date">
+                    <button type="submit" class="btn btn-info">Go</button>
+                
+            </div>
+            </form>
+            <img src="../images/landmark.png" alt="landmark" class="landmark">
+          </div>
+    </div>
+    <footer>&#169; 2019 La Capsule</footer>
+</body>
+
+</html>

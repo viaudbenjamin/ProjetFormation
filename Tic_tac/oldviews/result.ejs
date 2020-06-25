@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>test</p>
+    <h1>Les train pour le <%=dateaffichage(voyageList[0].date)%></h1>
+    <%for(var i=0;i<voyageList.length;i++){%>
+    <p><%=voyageList[i].departure%>/<%=voyageList[i].arrival%></p>
+    <p><%=voyageList[i].departureTime%></p>
+    <p><%=voyageList[i].price%></p>
+        <a href="/commande?id=<%=voyageList[i]._id%>"><button>OK</button></a>
+    <%}%>
+
+</body>
+</html>

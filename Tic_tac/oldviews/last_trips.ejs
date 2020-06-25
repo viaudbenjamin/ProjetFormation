@@ -1,0 +1,60 @@
+<%-include('header')%>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 central_available">
+                <h2 class=" text-white font-weight-normal left_trips ml-5">My last trips</h1>
+              <div class="card mt-4">
+                <table class="table justify-content-center">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-center">Date </th>
+                      <th scope="col" class="text-center">Journey</th>
+                      <th scope="col" class="text-center">Departure Time</th>
+                    </tr>
+                  </thead>
+                  <%for(var i=0;i<commandeList.length;i++){%>
+                    
+                  <tbody>
+                    <div class="container">
+                    <tr>
+                      
+                      <%for(var t=0;t<commandeList[i].train.length;t++){%>
+                      <th scope="row" class="text-center"><%=dateaffichage(commandeList[i].train[t].date)%></th>
+                      <td class="text-center"><%=commandeList[i].train[t].departure%>/<%=commandeList[i].train[t].arrival%></td>
+                      <td class="text-center"><%=commandeList[i].train[t].departureTime%></td>
+                      <%}%>
+                      </tr>
+                      <tr>
+                      <th scope="col" class="text-center bg-danger text-warning " ></th>
+                      <td class="text-center text-danger">Tolal</td>
+                      <td class="text-center text-danger"><%=commandeList[i].total%> €</td>
+                    </tr>
+                    </div>
+
+                  </tbody>
+                  
+                  <%}%>
+                </table>
+                </div>
+                <table class="table bg-warning">
+                  <tbody>
+
+                  </tbody>
+                </table>
+                <div class="row offset-11">
+                  <a href="/recherche" class="btn btn-primary btn-available mt-3 marge">Home</a>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+          </div>
+
+    <footer>&#169; 2019 La Capsule</footer>
+</body>
+
+</html>

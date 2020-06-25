@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <title>WeatherApp</title>
+</head>
+<body>
+
+
+    <!-- HEADER -->
+    <nav class=" header navbar navbar-light bg-dark">
+        Weather App
+    <a class="logout" href="/users/logout">Deconnexion</a>
+</nav>
+<div >
+    <div class="container">
+        <div class="row " id="affichageVille">
+            
+            <div class=" col-md-6">
+                <div id="mapid"></div>
+                    <!-- <img class="img-fluid" src="./images/map.png" alt=""> -->
+            </div>
+            <div class="col-6 ">
+                <form action="/ajoutVille" method="POST">
+                    <div id="villeAdd" class="form-group">
+                        <input type="text" class="form-control" name="ville" placeholder="Enter city name">
+                        <button  type="submit" class="btn btn-info">Add</button>
+                    </div>
+                    <div id="test" name="<%=doublon%>">
+                    <div id="existe" name="<%=existe%>">
+                    </div> 
+                </form>
+                <div id="update"style="align-items: center">
+                    <a href="/update">Update city
+                    <i class="fas fa-sync-alt"></i></a>
+                </div>
+                <div>
+                    
+                    <ul  id="alertMessage" class="list-group">
+                        
+                        <% for(var i=0;i<villeList.length;i++){%>
+                        <li  id="indice" class="list-group-item d-flex justify-content-between align-items-center">
+                        <%=villeList[i].nom %>
+                        <div>
+                        <%=villeList[i].description %>
+                        <img src="<%=villeList[i].image%>">
+                        <span class="badge badge-primary badge-pill"><%=villeList[i].temperature_min%></span>
+                        <span class="badge badge-primary badge-pill"><%=villeList[i].temperature_max %></span>        
+                        </div>
+
+                        <div class="longitude" data-longitude="<%=villeList[i].longitude %>"></div>
+                        <div class="latitude" data-latitude="<%=villeList[i].latitude %>"></div>
+                        <a href="/suprimerVille?nom=<%=villeList[i]._id %>""><i class="far fa-times-circle"></i></a>
+                        </li>
+
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- GRID -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a41e9403cf.js" crossorigin="anonymous"></script>
+    
+    <script src="../javascripts/scriptWeather.js"></script>
+</body>
+</html>

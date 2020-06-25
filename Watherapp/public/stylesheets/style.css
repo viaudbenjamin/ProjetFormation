@@ -1,0 +1,103 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ 
+}
+
+a {
+  color: #00B7FF;
+}
+
+.empty {
+  font-size: 16px;
+  color:#ffc107;
+}
+
+.logout {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+
+
+.home {
+  background-image: url('../images/weather.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.navItem{
+  margin-bottom: 10px;
+}
+
+.get_started{
+  margin-bottom: 70px;
+}
+
+.header {
+  margin-bottom: 0px;
+  color: #FFFFFF;
+}
+label{
+  display: block;
+  text-align: center;
+}
+h1{
+  font-size: 26px;
+}
+h2{
+  font-size: 20px;
+}
+#formulaire{
+  margin-top: 5em;
+}
+#map{
+  width: 100%;
+  height: 25em;
+  margin-top: 4em;
+}
+#villeAdd{
+  display: flex;
+  flex-direction: row;
+}
+h3{
+  text-align: center;
+}
+#update{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#update>a{
+  font-size: 1.2em;
+}
+#update>i{
+  margin-left: 1em;
+  margin-top:4px;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+}
+#affichageVille{
+  margin-top:15em;
+}
+button{
+  background: transparent;
+  border: none;
+
+}
+#mapid { 
+  height: 300px; 
+}

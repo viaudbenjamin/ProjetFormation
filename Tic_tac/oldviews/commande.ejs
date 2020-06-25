@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%var total = 0
+    for(var i=0;i<command.length;i++){%>
+    
+    <p><%=i+1%></p>
+    <p><%=command[i].price%></p>
+    <p><%=command[i].depart%></p>
+    <p><%=command[i].villedepart%>/<%=command[i].villearriver%></p>
+    <p><%=dateaffichage(command[i].date)%></p>
+    <%total += command[i].price%>
+    <%}%>
+    <p><%=total%></p>
+    <a href="/confirmationCommande?total=<%=total%>"><button>ok</button></a>
+</body>
+</html>

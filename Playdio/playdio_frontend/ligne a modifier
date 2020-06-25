@@ -1,0 +1,40 @@
+// DEVENU INUTILE
+
+
+backend
+index.js
+
+ligne 8,8,10 : modifier les var client_id, client_secret, redirect_uri
+ligne 67 : modifer la var idSpotify avec votre id spotify (seulement quand on aura besoin)
+
+frontend
+
+getTokens.js
+
+ligne 22 : modifer le fetch avec votre IP
+
+connect.js
+
+ligne 33 : modifer le fetch avec votre IP
+
+app.json
+
+ligne 3 : le name doit etre celui de votre compte expo
+
+signUp.js 
+
+ligne 20 : modifer le fetch avec votre IP
+ligne 36 : modifer le fetch avec votre IP
+
+
+// supprimer données local Storage
+AsyncStorage.removeItem("user")
+
+// ajouter données local Storage
+var storageUser = {
+    "email": "marion.toutant@gmail.com",
+    "idSpotify": "20jsoqg4lepva2a9osvyqwg1a",
+    "namePlatform": "spotify",
+    "id": "5eda54934b437a052471a86c"
+  }
+AsyncStorage.setItem("user",JSON.stringify(storageUser))

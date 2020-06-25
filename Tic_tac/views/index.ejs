@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketac - Connection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+
+<body>
+    <div class="row-fluid col-12 bg-white p-3">
+        <div class="navBar">
+        <div class="leftNav">
+            <ul>
+                <li class="mtl">
+                    <a href="/recherche"><img src="../images/train.png" alt="LogoTicEtTac"></a>
+                </li>
+                <li class="mtl top">
+                    Ticketac
+                </li>
+
+            </ul>
+        </div>
+        <div class="rightNav">
+            <ul>
+                <li class="red mtr"><a href="/logout" class="licolor">Connection</a></li>
+                <li class="mtr"><a href="/last-commande" class="basic">My last trips</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="central">
+        <div class="card w-42 bg-transparent border-0">
+            <div class="card-body text-center">
+                <form action="/sign-in" method="POST">
+                <h2 class="text-center text-white font-weight-normal">Sign-in :</h1>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1"name="email"><br>
+                <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password"><br>
+                <button type="submit" class="btn btn-info ">Confirme</button>
+            
+            </form>
+                
+            </div>
+        </div>
+        <div class="card w-42 bg-transparent border-0">
+            <div class="card-body text-center">
+                <form action="/sign-up" method="POST">
+                <h2 class="text-center text-white font-weight-normal">Sign-up :</h1>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" name="name"><br>
+            <input type="text" class="form-control" placeholder="FirstName" aria-label="FirstName" aria-describedby="basic-addon1" name="firstname"><br>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email"><br>
+            <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password"><br>
+            <button type="submit" class="btn btn-info">Confirme</button>
+                </form>
+            
+        </div>
+        </div>
+    </div>
+    <footer>&#169; 2019 La Capsule</footer>
+</body>
+
+</html>
